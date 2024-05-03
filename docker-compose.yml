@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  phoenixd:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9740:9740"
+    networks:
+      - my_network
+
+  lnbits:
+    image: bitkarrot1/lnbits-dev:latest
+    ports:
+      - "5000:5000"
+    networks:
+      - my_network
+
+networks:
+  my_network:
