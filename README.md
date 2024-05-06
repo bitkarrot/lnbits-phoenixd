@@ -18,15 +18,26 @@ settings with the corresponding phoenixd http key and the phoenixd endpoint:
 - Default phoenixd endpoint: http://localhost:9740/ 
 - The phoenixd http key will be located in the phoenixd container at phoenixd.conf
 
-Inside of LNBits Admin panel, use the name of the phoenix docker container instead of localhost:
+Inspect your docker containers:
 
-<img width="732" alt="Screenshot 2024-05-05 at 10 55 39 PM" src="https://github.com/bitkarrot/lnbits-phoenixd/assets/73979971/fbd565b0-d660-411e-bb68-0ba6c6923050">
+<img width="600" alt="Screenshot 2024-05-06 at 12 12 16 AM" src="https://github.com/bitkarrot/lnbits-phoenixd/assets/73979971/11126b8a-908a-4a64-b08a-74fb19ad2c8b">
+
+
+Inside of LNBits Admin panel, use the name of the phoenix docker container instead of localhost:
+<img width="600" alt="Screenshot 2024-05-05 at 10 55 39 PM" src="https://github.com/bitkarrot/lnbits-phoenixd/assets/73979971/f8a9f888-54d5-47b6-b39c-b1e78b388347">
+
+- Save and Restart the LNBits server.
+- Check your logs to see if connected to phoenixd wallet.
+  
+<img width="600" alt="Screenshot 2024-05-06 at 12 12 41 AM" src="https://github.com/bitkarrot/lnbits-phoenixd/assets/73979971/e61ed7ef-c2ef-4704-897c-5d6f4b719409">
+
+  
 
 ## Remember to backup your phoenixd seed words.
 
 --- 
 
-## Where to general help
+## Where to get more help
 
 - Phoenixd discussions: https://github.com/ACINQ/phoenixd/discussions
 - LNBits Telegram: @lnbits
