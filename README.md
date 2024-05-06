@@ -24,8 +24,20 @@ Inside of LNBits Admin panel, use the name of the phoenix docker container inste
 
 ## Remember to backup your phoenixd seed words.
 
+--- 
+
+## Where to general help
+
+- Phoenixd discussions: https://github.com/ACINQ/phoenixd/discussions
+- LNBits Telegram: @lnbits
+
+## Original Source
+
+- https://github.com/lnbits/lnbits
+- https://github.com/ACINQ/phoenixd
 
 ## Note:
 
-This is a pre-release, for those who want test out and deploy before next lnbits release.
-p.s. I am not super familiar with Docker, so if there is a better way to do this, please do suggest. 
+This is a pre-release, for those who want test out and deploy before next lnbits release. 
+There are some customizations which are not default to lnbits. 
+p.s. I am not super familiar with Docker, so if there is a better way to do this, please do suggest.
