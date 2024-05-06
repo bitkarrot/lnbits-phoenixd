@@ -9,6 +9,11 @@ and phoenixd Dockerfile, source: https://github.com/ACINQ/phoenixd, v0.1.4
 
 This repo will be updated to latest LNBits release when it comes out. 
 
+## New to Docker? 
+
+No problem, here's a guide on how to get started on a vps
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04
+
 ## To run:
 
 git clone this repository.
