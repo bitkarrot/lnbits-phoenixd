@@ -25,7 +25,6 @@ RUN git clone --recursive --single-branch --branch ${LNBITS_BRANCH} -c advice.de
     https://github.com/lnbits/lnbits . \
     && test `git rev-parse HEAD` = ${LNBITS_COMMIT_HASH} || exit 1 
     
-# COPY . .
 
 RUN mkdir data
 
@@ -35,5 +34,8 @@ ENV LNBITS_PORT="5000"
 ENV LNBITS_HOST="0.0.0.0"
 
 EXPOSE 5000
+
+# Expose default data directory as VOLUME
+VOLUME ["/app"]
 
 CMD ["sh", "-c", "poetry run lnbits --port $LNBITS_PORT --host $LNBITS_HOST"]
