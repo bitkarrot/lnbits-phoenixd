@@ -41,6 +41,16 @@ Inside of LNBits Admin panel, use the name of the phoenix docker container inste
 ## Remember to backup your phoenixd seed words.
 
 --- 
+## To give access with a domain name
+
+Ok, now that you have your Docker containers running on your VPS,
+To Make LNbits install accessible over clearnet with a domain, follow these instructions: 
+
+https://github.com/lnbits/lnbits/blob/dev/docs/guide/installation.md#reverse-proxy-with-automatic-https-using-caddy
+
+### Don't have a vps? Here's a short list:
+https://gist.github.com/bitkarrot/e394556e6d11028e8af5c4d435ba230e
+
 
 ## Where to get more help
 
