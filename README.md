@@ -2,6 +2,8 @@
 
 ## What this is:
 
+Run a super light, simple Lightning node (phoenixd) together with LNBits within Docker.
+
 This is a docker-compose.yml for lnbits dev branch at LNBITS_COMMIT_HASH=0076a85fdb557552f51c5ec11e0f8ff8df2e17de
 and phoenixd Dockerfile, source: https://github.com/ACINQ/phoenixd, v0.1.4
 
@@ -32,6 +34,7 @@ Inside of LNBits Admin panel, use the name of the phoenix docker container inste
 <img width="600" alt="Screenshot 2024-05-06 at 12 12 41 AM" src="https://github.com/bitkarrot/lnbits-phoenixd/assets/73979971/e61ed7ef-c2ef-4704-897c-5d6f4b719409">
 
   
+---
 
 ## Remember to backup your phoenixd seed words.
 
@@ -50,5 +53,5 @@ Inside of LNBits Admin panel, use the name of the phoenix docker container inste
 ## Note:
 
 This is a pre-release, for those who want test out and deploy before next lnbits release. 
-There are some customizations which are not default to lnbits. 
+There are some docker customizations which are not default to lnbits. 
 p.s. I am not super familiar with Docker, so if there is a better way to do this, please do suggest.
