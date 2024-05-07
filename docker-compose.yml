@@ -5,15 +5,21 @@ services:
     build:
       context: ./phoenixd
       dockerfile: Dockerfile
+    restart: unless-stopped
+    stop_signal: SIGKILL
     ports:
       - "9740:9740"
     networks:
       - my_network
 
   lnbits:
+    depends_on:
+    - phoenixd
     build:
       context: ./lnbits
       dockerfile: Dockerfile
+    restart: unless-stopped
+    stop_signal: SIGKILL
     ports:
       - "5000:5000"
     networks:
