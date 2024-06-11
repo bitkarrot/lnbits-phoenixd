@@ -23,7 +23,7 @@ WORKDIR /app
 
 RUN git clone --recursive --single-branch --branch ${LNBITS_BRANCH} -c advice.detachedHead=false \
     https://github.com/lnbits/lnbits . \
-    && test `git rev-parse HEAD` = ${LNBITS_COMMIT_HASH} || exit 1 
+    && git checkout ${LNBITS_COMMIT_HASH} || exit 1 
     
 
 RUN mkdir data
