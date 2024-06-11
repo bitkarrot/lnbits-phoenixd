@@ -1,7 +1,8 @@
 FROM python:3.10-slim-bullseye
 
 ARG LNBITS_BRANCH=dev
-ARG LNBITS_COMMIT_HASH=0076a85fdb557552f51c5ec11e0f8ff8df2e17de
+ARG LNBITS_COMMIT_HASH=2db5a83f4ed5dd21d99123a0947238f0674270c0
+# release v0.12.8
 
 RUN apt-get clean
 RUN apt-get update
