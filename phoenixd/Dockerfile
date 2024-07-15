@@ -1,9 +1,9 @@
 # Use Ubuntu image for building for compatibility with macOS arm64 builds
-FROM eclipse-temurin:21-jdk-jammy AS BUILD
+FROM eclipse-temurin:21-jdk-jammy AS build
 
 # Set necessary args and environment variables for building phoenixd
-ARG PHOENIXD_BRANCH=seed-check
-ARG PHOENIXD_COMMIT_HASH=e480167ebd060e961754c212fdfebb3550176c5d
+ARG PHOENIXD_BRANCH=master
+ARG PHOENIXD_COMMIT_HASH=3b6feb3c3f209b7c7a77ef6843734840e97e502b
 
 # Upgrade all packages and install dependencies
 RUN apt-get update \
@@ -19,7 +19,7 @@ RUN git clone --recursive --single-branch --branch ${PHOENIXD_BRANCH} -c advice.
     && ./gradlew distTar
 
 # Alpine image to minimize final image size
-FROM eclipse-temurin:21-jre-alpine as FINAL
+FROM eclipse-temurin:21-jre-alpine as final
 
 # Upgrade all packages and install dependencies
 RUN apk update \
@@ -33,7 +33,7 @@ USER phoenix
 
 # Unpack the release
 WORKDIR /phoenix
-COPY --chown=phoenix:phoenix --from=BUILD /phoenixd/build/distributions/phoenix-*-jvm.tar .
+COPY --chown=phoenix:phoenix --from=build /phoenixd/build/distributions/phoenix-*-jvm.tar .
 RUN tar --strip-components=1 -xvf phoenix-*-jvm.tar
 
 # Indicate that the container listens on port 9740
