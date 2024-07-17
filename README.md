@@ -47,6 +47,23 @@ Inside of LNBits Admin panel, use the name of the phoenix docker container inste
 
 ## Remember to backup your phoenixd seed words.
 
+
+To restore a seed from backup, run:
+
+``` 
+read SEED &&  docker compose exec phoenixd bash -c "echo $SEED > /phoenix/.phoenix/seed.dat"
+<type in 12 seed words like this: word1 word2 word3 ...>
+
+docker compose stop phoenixd
+docker compose up -d phoenixd
+
+# Verify your seed/nodeid
+docker compose exec phoenixd bash -c "cat /phoenix/.phoenix/seed.dat"
+docker compose exec phoenixd bash -c "/phoenix/bin/phoenix-cli getinfo"
+
+```
+
+
 --- 
 ## To give access with a domain name
 
