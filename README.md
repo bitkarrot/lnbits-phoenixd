@@ -5,9 +5,11 @@
 Run a super light, simple Lightning node (phoenixd) together with LNBits within Docker.
 
 This is a docker-compose.yml for lnbits dev branch at LNBITS_COMMIT_HASH=2db5a83f4ed5dd21d99123a0947238f0674270c0, release 0.12.8
-and phoenixd Dockerfile, source: https://github.com/ACINQ/phoenixd, v0.1.5
+and phoenixd Dockerfile, source: https://github.com/ACINQ/phoenixd.
 
-Latest update: Mon Jun 10 21:41:01 PDT 2024
+Latest PHOENIXD_COMMIT_HASH=3b6feb3c3f209b7c7a77ef6843734840e97e502b
+
+Latest update: Wed Jul 17 12:32:34 PDT 2024
 
 This repo will be updated to latest LNBits release when it comes out. 
 
